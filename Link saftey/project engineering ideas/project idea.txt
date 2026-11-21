@@ -1,0 +1,51 @@
+Link security checking:
+
+the software idea is to check on the link security to make sure the link have nothing malicious or suspicious no matter how hard its accurately it's been masked or how hard the attacker or the hacker worked on the link to make it a normal link for the victim to click on 
+
+and not just that, i need also the software system to have analysis page that have these points as a test with explaination for every point
+
+
+Threat & Phishing Blocklist Check — Compares the URL, domain, and final destination against known phishing, malware, and scam lists to catch confirmed bad links immediately.
+
+Lookalike & Typosquatting Detection — Checks if the domain mimics a trusted brand using swapped letters, extra words, or slight misspellings (paypa1, micros0ft-login).
+
+Homograph & Punycode (xn--) Inspection — Detects non-Latin or lookalike characters (like Cyrillic or Unicode characters that look like Latin letters) used to disguise a fake domain as a real one.
+
+URL Shortener & Redirect Unwrapping — Expands short links and follows redirect chains (hop 1 -> hop 2 -> final URL) to expose hidden destinations behind clean-looking links.
+
+Open Redirect & Cross-Domain Jump Check — Flags URLs that start on a trusted domain and bounce the user to an unrelated or suspicious external site.
+
+User-Info (@) Masking Check — Catches links containing @ (such as [https://trusted.com@evil-site.com](https://trusted.com@evil-site.com)), where everything before @ is just decoy text and the real host is after @.
+
+Subdomain Spoofing Analysis — Inspects deep or deceptive subdomains (like login.secure-bank.example.com) where a familiar word sits in a subdomain while the real root domain is unfamiliar.
+
+URL Obfuscation & Encoding Check — Flags heavy percent-encoding (%xx), hex/octal sequences, Base64 blobs, or unusual character escapes used to hide payloads or real targets.
+
+Dangerous Scheme & Protocol Check — Blocks or flags non-browsing or risky schemes like javascript:, data:, file:, or unusual custom protocol handlers.
+
+Domain Age & Freshness Check — Checks how recently the domain was registered; brand-new domains are frequently spun up for short-lived phishing campaigns.
+
+SSL/TLS Certificate & HTTPS Check — Verifies whether HTTPS is active, valid, not expired, and matches the domain—while noting that attackers also use free SSL on phishing pages.
+
+Hosting IP, ASN & Geo Risk Check — Evaluates the underlying server IP, hosting provider/ASN, and reputation history for high abuse or bulletproof-hosting patterns.
+
+Port & Path Anomaly Check — Flags non-standard ports, misleading file extensions in paths (like .pdf or .docx paths that actually serve web pages/downloads), or suspicious query parameters.
+
+Login & Credential Form Detection — Checks if the destination page asks for passwords, PINs, OTP codes, or payment cards—especially on unfamiliar or newly created domains.
+
+Form Action Destination Mismatch — Checks where a form actually submits data (<form action="...">); a phishing page may look like Brand A while sending credentials to an unrelated domain.
+
+Brand Impersonation & Urgency Clues — Looks for mismatched brand logos/names combined with high-pressure lures ("account suspended", "urgent verification", "claim reward").
+
+Hidden Elements & Clickjacking/Overlay Clues — Detects invisible elements, full-screen overlays, or deceptive UI traps designed to trick users into clicking or entering info by mistake.
+
+Auto-Download & Malicious File Trigger Check — Warns if visiting the link immediately triggers executable, archive, script, or suspicious file downloads (exe, msi, apk, iso, zip, js, vbs).
+
+Cloaking & Bot-Evasion Detection — Notices when a link behaves differently for scanners vs. browsers or blocks inspection in ways commonly used to hide phishing pages from security checks.
+
+Final Destination vs. Display Text Mismatch — Compares the visible link label/text or preview against where the link actually lands so disguised links ("Click here for official portal" going elsewhere) are exposed.
+
+
+
+
+ 
