@@ -1,0 +1,125 @@
+{
+  "additionalProperties": false,
+  "properties": {
+    "dangerous_schemes": {
+      "additionalProperties": {
+        "maxItems": 2,
+        "minItems": 2,
+        "prefixItems": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "type": "array"
+      },
+      "title": "Dangerous Schemes",
+      "type": "object"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "dynamic_dns": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Dynamic Dns",
+      "type": "array"
+    },
+    "exfil_hosts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Exfil Hosts",
+      "type": "array"
+    },
+    "free_cert_issuers": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Free Cert Issuers",
+      "type": "array"
+    },
+    "popular_domains": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Popular Domains",
+      "type": "array"
+    },
+    "redirect_params": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Redirect Params",
+      "type": "array"
+    },
+    "risky_asns": {
+      "default": [],
+      "items": {
+        "type": "integer"
+      },
+      "title": "Risky Asns",
+      "type": "array"
+    },
+    "risky_countries": {
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "title": "Risky Countries",
+      "type": "array"
+    },
+    "sensitive_words": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Sensitive Words",
+      "type": "array"
+    },
+    "shorteners": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Shorteners",
+      "type": "array"
+    },
+    "suspicious_tlds": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Suspicious Tlds",
+      "type": "array"
+    },
+    "ugc_hosting": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Ugc Hosting",
+      "type": "array"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "shorteners",
+    "suspicious_tlds",
+    "ugc_hosting",
+    "dynamic_dns",
+    "popular_domains",
+    "redirect_params",
+    "sensitive_words",
+    "dangerous_schemes",
+    "exfil_hosts"
+  ],
+  "title": "ListsFile",
+  "type": "object"
+}

@@ -1,0 +1,98 @@
+{
+  "$defs": {
+    "FeedModel": {
+      "additionalProperties": false,
+      "properties": {
+        "attribution": {
+          "default": "",
+          "title": "Attribution",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "format": {
+          "title": "Format",
+          "type": "string"
+        },
+        "kind": {
+          "title": "Kind",
+          "type": "string"
+        },
+        "max_bytes": {
+          "default": 10000000,
+          "maximum": 100000000,
+          "minimum": 1000,
+          "title": "Max Bytes",
+          "type": "integer"
+        },
+        "min_expected": {
+          "default": 1,
+          "minimum": 0,
+          "title": "Min Expected",
+          "type": "integer"
+        },
+        "name": {
+          "pattern": "^[a-z0-9_]{2,40}$",
+          "title": "Name",
+          "type": "string"
+        },
+        "terms": {
+          "default": "",
+          "title": "Terms",
+          "type": "string"
+        },
+        "terms_url": {
+          "default": "",
+          "title": "Terms Url",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "url": {
+          "pattern": "^https://",
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "title",
+        "url",
+        "format",
+        "kind",
+        "category"
+      ],
+      "title": "FeedModel",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "feeds": {
+      "items": {
+        "$ref": "#/$defs/FeedModel"
+      },
+      "title": "Feeds",
+      "type": "array"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "feeds"
+  ],
+  "title": "FeedsFile",
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+# Development seed for the OpenPhish-format feed. These are FAKE indicators on reserved example/test domains
+# (RFC 2606 / 6761), so loading them can never flag a real site. Load with:
+#   python -m interfaces.cli import-feed openphish data/seeds/dev_threat_feed.txt
+# 28 entries: enough to pass the feed minimum-size sanity check (20), so you can see a blocklist hit offline.
+http://phish-01.example/login.php
+http://phish-02.example/login.php
+http://phish-03.example/login.php
+http://phish-04.example/login.php
+http://phish-05.example/login.php
+http://phish-06.example/login.php
+http://phish-07.example/login.php
+http://phish-08.example/login.php
+http://phish-09.example/login.php
+http://phish-10.example/login.php
+http://phish-11.example/login.php
+http://phish-12.example/login.php
+http://phish-13.example/login.php
+http://phish-14.example/login.php
+http://phish-15.example/login.php
+http://phish-16.example/login.php
+http://phish-17.example/login.php
+http://phish-18.example/login.php
+http://phish-19.example/login.php
+http://phish-20.example/login.php
+http://phish-21.example/login.php
+http://phish-22.example/login.php
+http://phish-23.example/login.php
+http://phish-24.example/login.php
+http://phish-25.example/login.php
+https://paypa1-login.example/signin
+http://secure-account-verify.test/update.html
+http://192.0.2.44/bank/login.html

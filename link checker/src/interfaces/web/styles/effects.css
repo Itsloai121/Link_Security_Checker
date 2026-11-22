@@ -1,0 +1,71 @@
+/* The five requested effects: soft light lines, blur-colour, scroll fade, infinite soft float, slow blur typing. */
+
+/* 1. Light shade: thin lines of light and a drifting yellow glow behind everything */
+.light { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; background: var(--black); }
+.light__lines {
+  position: absolute; inset: -25% -10%;
+  background: repeating-linear-gradient(112deg, transparent 0 94px, rgb(255 255 255 / 0.055) 94px 95px);
+  -webkit-mask-image: radial-gradient(ellipse 75% 65% at 78% 0%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(ellipse 75% 65% at 78% 0%, #000 0%, transparent 72%);
+}
+.light__beam {
+  position: absolute; top: -10%; bottom: -10%; width: 38vw; left: -20vw; transform: skewX(-18deg);
+  background: linear-gradient(90deg, transparent, rgb(255 214 10 / 0.07) 48%, rgb(255 255 255 / 0.1) 50%, rgb(255 214 10 / 0.05) 52%, transparent);
+  filter: blur(1px); animation: beam-slide 26s linear infinite;
+}
+.light__beam--2 { animation-duration: 38s; animation-delay: -14s; opacity: 0.6; width: 22vw; }
+.light__glow {
+  position: absolute; width: 72vmax; height: 72vmax; top: -40vmax; right: -24vmax; border-radius: 50%;
+  background: radial-gradient(closest-side, rgb(255 214 10 / 0.17), rgb(255 214 10 / 0.04) 55%, transparent 72%);
+  filter: blur(24px); animation: glow-drift 24s ease-in-out infinite alternate;
+}
+@keyframes beam-slide { from { translate: 0 0; } to { translate: 160vw 0; } }
+@keyframes glow-drift { from { translate: 0 0; scale: 1; } to { translate: -6vw 5vh; scale: 1.12; } }
+
+/* soft edge-lit border = "soft line shade of light": only a 1px masked ring carries the gradient, so the fill stays clean */
+.glass { position: relative; border-radius: var(--radius); background: var(--glass); }
+.glass::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(140deg, var(--yellow-line), rgb(255 255 255 / 0.1) 38%, rgb(255 255 255 / 0.04) 70%, rgb(255 214 10 / 0.22));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
+@supports (backdrop-filter: blur(1px)) { .glass--frost { backdrop-filter: blur(16px) saturate(1.2); -webkit-backdrop-filter: blur(16px) saturate(1.2); } }
+
+/* 2. Scroll fade in / fade out. --vis (0..1) is set by reveal.js from how much of the element is on screen. */
+[data-reveal] {
+  opacity: var(--vis, 1); filter: blur(calc((1 - var(--vis, 1)) * 7px)); /* default 1: no JS = fully visible */
+  transition: opacity 0.9s var(--ease-slow), filter 0.9s var(--ease-slow);
+}
+
+/* 3. Infinite soft float loop. `translate` is animated so it never fights hover `scale` or reveal's opacity/filter. */
+.float { animation: float var(--float-d, 7.2s) ease-in-out var(--float-delay, 0s) infinite; will-change: translate; }
+@keyframes float { 0%, 100% { translate: 0 0; } 50% { translate: 0 calc(var(--float-amp, 7px) * -1); } }
+.site-header .float { --float-amp: 3px; }
+.float:nth-child(2n) { --float-d: 8.4s; --float-delay: -2.1s; }
+.float:nth-child(3n) { --float-d: 6.6s; --float-delay: -3.7s; }
+.float:nth-child(5n) { --float-d: 9.2s; --float-delay: -5.2s; }
+.float:nth-child(7n) { --float-d: 7.9s; --float-delay: -1.2s; }
+
+/* 4. Soft, slow, blurred typing. Characters are wrapped by typing.js; they sharpen one after another. */
+.type-line { display: inline; white-space: normal; }
+.type-word { display: inline-block; white-space: nowrap; }
+.type-ch { display: inline-block; opacity: 0; filter: blur(9px); translate: 0 0.12em; }
+.is-typing .type-ch { animation: type-in 0.95s var(--ease-slow) both; animation-delay: calc(var(--i, 0) * var(--speed, 34ms)); }
+.is-typed .type-ch { opacity: 1; filter: none; translate: 0 0; animation: none; }
+@keyframes type-in { from { opacity: 0; filter: blur(9px); translate: 0 0.12em; } 60% { opacity: 0.85; } to { opacity: 1; filter: blur(0); translate: 0 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .light__beam, .light__glow, .float { animation: none; }
+  [data-reveal] { opacity: 1; filter: none; transition: none; }
+  .type-ch { opacity: 1; filter: none; translate: none; animation: none !important; }
+}
+
+/* No-JS / failed-JS safety net: text prepared for typing is hidden only while JS is alive, and always revealed after 3s. */
+.js [data-type]:not([data-type-prepared]) { visibility: hidden; animation: type-failsafe 0s linear 3s forwards; }
+@keyframes type-failsafe { to { visibility: visible; } }
+
+/* "Pause animations" switch (footer): identical still state to prefers-reduced-motion, user-controlled. */
+.no-motion .light__beam, .no-motion .light__glow, .no-motion .float, .no-motion .check[data-status="pending"]::before { animation: none !important; }
+.no-motion [data-reveal] { opacity: 1 !important; filter: none !important; transition: none !important; }
+.no-motion .type-ch { opacity: 1 !important; filter: none !important; translate: none !important; animation: none !important; }

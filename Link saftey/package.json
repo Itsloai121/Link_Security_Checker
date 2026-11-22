@@ -1,8 +1,0 @@
-{
-  "name": "link-safety",
-  "version": "0.2.0",
-  "private": true,
-  "description": "Local-first link risk analysis service",
-  "scripts": { "start": "node --disable-proto=throw --env-file-if-exists=.env server.js" },
-  "engines": { "node": ">=25.7.0" }
-}

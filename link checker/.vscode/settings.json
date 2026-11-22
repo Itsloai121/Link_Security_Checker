@@ -1,0 +1,15 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+  "python.analysis.extraPaths": ["src"],
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "terminal.integrated.env.windows": { "PYTHONPATH": "src" },
+  "terminal.integrated.env.linux": { "PYTHONPATH": "src" },
+  "terminal.integrated.env.osx": { "PYTHONPATH": "src" },
+  "json.schemas": [
+    { "fileMatch": ["config/defaults/reference/brands.json"], "url": "./config/schemas/brands.schema.json" },
+    { "fileMatch": ["config/defaults/reference/lists.json"], "url": "./config/schemas/lists.schema.json" },
+    { "fileMatch": ["config/defaults/reference/lexicons.json"], "url": "./config/schemas/lexicons.schema.json" },
+    { "fileMatch": ["config/defaults/feeds.json"], "url": "./config/schemas/feeds.schema.json" }
+  ]
+}

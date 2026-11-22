@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="no-referrer">
+<script src="/static/components/js-flag.js"></script>
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/styles/tokens.css">
+<link rel="stylesheet" href="/static/styles/base.css">
+<link rel="stylesheet" href="/static/styles/effects.css">
+<link rel="stylesheet" href="/static/styles/layout.css">
+<link rel="stylesheet" href="/static/styles/components.css">
+<link rel="stylesheet" href="/static/styles/pages.css">
+<title>Check a link · Unmask</title>
+<meta name="description" content="Paste a link to see where it really goes and whether it is dangerous.">
+<script type="module" src="/static/pages/process.page.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="light" aria-hidden="true"><div class="light__lines"></div><div class="light__glow"></div><div class="light__beam"></div><div class="light__beam light__beam--2"></div></div>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/"><img src="/assets/images/logo-mark.svg" alt="" width="34" height="34"><span>Unmask</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#tests">What we check</a>
+      <a href="/#how">How it works</a>
+      <a class="btn btn--primary btn--small float" href="/process">Check a link</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="container process">
+  <h1 class="process__title" data-type data-type-speed="36">Paste the link you are unsure about.</h1>
+  <p class="lede" data-type="words" data-type-speed="50">Copy it from the message without clicking it. We will follow it for you and report what we find.</p>
+
+  <form class="checker glass glass--frost" id="check-form" novalidate data-reveal>
+    <div class="checker__row">
+      <div class="field">
+        <label class="field__label" for="url">Link</label>
+        <input class="field__input" id="url" name="url" type="text" inputmode="url" autocomplete="off" autocapitalize="off" spellcheck="false" maxlength="4096" placeholder="https://" required aria-describedby="url-hint url-error">
+      </div>
+      <button class="btn btn--primary float" type="submit" id="submit">Check link</button>
+    </div>
+    <p class="field__hint" id="url-hint">Any link works, even ones starting with javascript: or data:. They are analysed as text and never run.</p>
+    <details class="optional">
+      <summary>Add the text the link showed (optional)</summary>
+      <div class="field">
+        <label class="field__label" for="label">Link text</label>
+        <input class="field__input" id="label" name="display_text" type="text" autocomplete="off" spellcheck="false" maxlength="1000" placeholder="Click here for the official portal" aria-describedby="label-hint">
+        <p class="field__hint" id="label-hint">We compare what the link claims to be with where it really goes.</p>
+      </div>
+    </details>
+    <p class="form-error" id="url-error" role="alert"></p>
+    <div class="examples">
+      <span>No link handy? Try one. They use reserved example domains that do not exist online:</span>
+      <button type="button" class="example" data-url="https://secure.paypal.com@login-paypa1.example/signin">paypal decoy with @</button>
+      <button type="button" class="example" data-url="https://xn--pypal-4ve.example/">look-alike letters</button>
+      <button type="button" class="example" data-url="http://3232235777/login.php">link hidden as a number</button>
+      <button type="button" class="example" data-url="javascript:alert(document.cookie)">javascript: link</button>
+    </div>
+  </form>
+
+  <ul class="assurances">
+    <li><strong>Never opened in your browser.</strong> Our server inspects the link so your device stays out of it.</li>
+    <li><strong>Private by default.</strong> Reports are deleted after 24 hours, or sooner when you choose.</li>
+    <li><strong>Honest about limits.</strong> Anything we could not verify is marked, not assumed safe.</li>
+  </ul>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p><strong>Your link is never opened in your browser.</strong> Reports are deleted automatically after 24 hours, and you can delete one yourself at any time.</p>
+    <p>Unmask reports what its tests find. It cannot prove a link is safe. When something is unsure or could not be checked, the report says so. Threat data, when enabled: OpenPhish community feed (non-commercial use) and The Spamhaus Project DROP lists.</p>
+    <button type="button" class="link-button" id="motion-toggle" aria-pressed="false">Pause animations</button>
+  </div>
+</footer>
+</body>
+</html>

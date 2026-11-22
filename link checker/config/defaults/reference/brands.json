@@ -1,0 +1,1201 @@
+{
+ "version": "2026.11",
+ "description": "Brands attackers impersonate and their OFFICIAL registrable domains. Starter list: review and extend for your audience. `tld_variants` lets <brand>.<country TLD> count as official (google.co.uk).",
+ "brands": [
+  {
+   "key": "paypal",
+   "name": "PayPal",
+   "domains": [
+    "paypal.com",
+    "paypal.me",
+    "paypalobjects.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "venmo",
+   "name": "Venmo",
+   "domains": [
+    "venmo.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "cashapp",
+   "name": "Cash App",
+   "domains": [
+    "cash.app"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "zelle",
+   "name": "Zelle",
+   "domains": [
+    "zellepay.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "stripe",
+   "name": "Stripe",
+   "domains": [
+    "stripe.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "wise",
+   "name": "Wise",
+   "domains": [
+    "wise.com",
+    "transferwise.com"
+   ],
+   "aliases": [
+    "transferwise"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "revolut",
+   "name": "Revolut",
+   "domains": [
+    "revolut.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "visa",
+   "name": "Visa",
+   "domains": [
+    "visa.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "mastercard",
+   "name": "Mastercard",
+   "domains": [
+    "mastercard.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "amex",
+   "name": "American Express",
+   "domains": [
+    "americanexpress.com"
+   ],
+   "aliases": [
+    "amex"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "westernunion",
+   "name": "Western Union",
+   "domains": [
+    "westernunion.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "payoneer",
+   "name": "Payoneer",
+   "domains": [
+    "payoneer.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "alipay",
+   "name": "Alipay",
+   "domains": [
+    "alipay.com"
+   ],
+   "category": "payments"
+  },
+  {
+   "key": "chase",
+   "name": "Chase",
+   "domains": [
+    "chase.com",
+    "jpmorgan.com",
+    "jpmorganchase.com"
+   ],
+   "aliases": [
+    "jpmorgan chase"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "bankofamerica",
+   "name": "Bank of America",
+   "domains": [
+    "bankofamerica.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "wellsfargo",
+   "name": "Wells Fargo",
+   "domains": [
+    "wellsfargo.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "citi",
+   "name": "Citibank",
+   "domains": [
+    "citi.com",
+    "citibank.com"
+   ],
+   "aliases": [
+    "citi bank"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "capitalone",
+   "name": "Capital One",
+   "domains": [
+    "capitalone.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "usbank",
+   "name": "U.S. Bank",
+   "domains": [
+    "usbank.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "hsbc",
+   "name": "HSBC",
+   "domains": [
+    "hsbc.com",
+    "hsbc.co.uk"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "barclays",
+   "name": "Barclays",
+   "domains": [
+    "barclays.co.uk",
+    "barclays.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "lloyds",
+   "name": "Lloyds Bank",
+   "domains": [
+    "lloydsbank.com",
+    "lloydsbank.co.uk"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "natwest",
+   "name": "NatWest",
+   "domains": [
+    "natwest.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "santander",
+   "name": "Santander",
+   "domains": [
+    "santander.com",
+    "santander.co.uk"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "ing",
+   "name": "ING",
+   "domains": [
+    "ing.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "deutschebank",
+   "name": "Deutsche Bank",
+   "domains": [
+    "deutsche-bank.de",
+    "db.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "bnpparibas",
+   "name": "BNP Paribas",
+   "domains": [
+    "bnpparibas.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "arabbank",
+   "name": "Arab Bank",
+   "domains": [
+    "arabbank.com",
+    "arabbank.jo"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "cibeg",
+   "name": "CIB Egypt",
+   "domains": [
+    "cibeg.com"
+   ],
+   "aliases": [
+    "commercial international bank"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "banquemisr",
+   "name": "Banque Misr",
+   "domains": [
+    "banquemisr.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "nbe",
+   "name": "National Bank of Egypt",
+   "domains": [
+    "nbe.com.eg"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "emiratesnbd",
+   "name": "Emirates NBD",
+   "domains": [
+    "emiratesnbd.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "mashreq",
+   "name": "Mashreq",
+   "domains": [
+    "mashreq.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "adcb",
+   "name": "ADCB",
+   "domains": [
+    "adcb.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "qnb",
+   "name": "QNB",
+   "domains": [
+    "qnb.com"
+   ],
+   "aliases": [
+    "qatar national bank"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "alrajhi",
+   "name": "Al Rajhi Bank",
+   "domains": [
+    "alrajhibank.com.sa"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "hbtf",
+   "name": "Housing Bank",
+   "domains": [
+    "hbtf.com"
+   ],
+   "category": "banking"
+  },
+  {
+   "key": "coinbase",
+   "name": "Coinbase",
+   "domains": [
+    "coinbase.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "binance",
+   "name": "Binance",
+   "domains": [
+    "binance.com",
+    "binance.us"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "kraken",
+   "name": "Kraken",
+   "domains": [
+    "kraken.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "metamask",
+   "name": "MetaMask",
+   "domains": [
+    "metamask.io"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "blockchain",
+   "name": "Blockchain.com",
+   "domains": [
+    "blockchain.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "trustwallet",
+   "name": "Trust Wallet",
+   "domains": [
+    "trustwallet.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "ledger",
+   "name": "Ledger",
+   "domains": [
+    "ledger.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "trezor",
+   "name": "Trezor",
+   "domains": [
+    "trezor.io"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "opensea",
+   "name": "OpenSea",
+   "domains": [
+    "opensea.io"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "uniswap",
+   "name": "Uniswap",
+   "domains": [
+    "uniswap.org"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "phantom",
+   "name": "Phantom",
+   "domains": [
+    "phantom.app"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "bybit",
+   "name": "Bybit",
+   "domains": [
+    "bybit.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "kucoin",
+   "name": "KuCoin",
+   "domains": [
+    "kucoin.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "cryptocom",
+   "name": "Crypto.com",
+   "domains": [
+    "crypto.com"
+   ],
+   "category": "crypto"
+  },
+  {
+   "key": "microsoft",
+   "name": "Microsoft",
+   "domains": [
+    "microsoft.com",
+    "microsoftonline.com",
+    "live.com",
+    "office.com",
+    "office365.com",
+    "outlook.com",
+    "azure.com",
+    "windows.com",
+    "xbox.com",
+    "skype.com",
+    "bing.com",
+    "msn.com",
+    "sharepoint.com",
+    "onedrive.com",
+    "microsoft365.com"
+   ],
+   "aliases": [
+    "office 365",
+    "microsoft 365",
+    "outlook",
+    "onedrive",
+    "sharepoint",
+    "azure",
+    "skype",
+    "xbox"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "google",
+   "name": "Google",
+   "domains": [
+    "google.com",
+    "gmail.com",
+    "youtube.com",
+    "googleusercontent.com",
+    "gstatic.com",
+    "withgoogle.com"
+   ],
+   "aliases": [
+    "gmail",
+    "google drive",
+    "google docs",
+    "youtube"
+   ],
+   "tld_variants": true,
+   "category": "tech"
+  },
+  {
+   "key": "apple",
+   "name": "Apple",
+   "domains": [
+    "apple.com",
+    "icloud.com",
+    "me.com",
+    "itunes.com",
+    "mzstatic.com"
+   ],
+   "aliases": [
+    "apple id",
+    "icloud",
+    "itunes"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "amazon",
+   "name": "Amazon",
+   "domains": [
+    "amazon.com",
+    "amzn.com",
+    "amzn.to",
+    "a.co",
+    "primevideo.com",
+    "audible.com"
+   ],
+   "aliases": [
+    "amazon prime",
+    "prime video",
+    "aws"
+   ],
+   "tld_variants": true,
+   "category": "retail"
+  },
+  {
+   "key": "facebook",
+   "name": "Facebook",
+   "domains": [
+    "facebook.com",
+    "fb.com",
+    "fb.me",
+    "messenger.com"
+   ],
+   "aliases": [
+    "meta",
+    "messenger"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "instagram",
+   "name": "Instagram",
+   "domains": [
+    "instagram.com"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "whatsapp",
+   "name": "WhatsApp",
+   "domains": [
+    "whatsapp.com",
+    "wa.me"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "twitter",
+   "name": "Twitter",
+   "domains": [
+    "twitter.com",
+    "x.com",
+    "t.co",
+    "twimg.com"
+   ],
+   "aliases": [
+    "x corp"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "linkedin",
+   "name": "LinkedIn",
+   "domains": [
+    "linkedin.com",
+    "licdn.com",
+    "lnkd.in"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "tiktok",
+   "name": "TikTok",
+   "domains": [
+    "tiktok.com"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "snapchat",
+   "name": "Snapchat",
+   "domains": [
+    "snapchat.com"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "telegram",
+   "name": "Telegram",
+   "domains": [
+    "telegram.org",
+    "t.me",
+    "telegram.me"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "discord",
+   "name": "Discord",
+   "domains": [
+    "discord.com",
+    "discord.gg",
+    "discordapp.com"
+   ],
+   "category": "social"
+  },
+  {
+   "key": "netflix",
+   "name": "Netflix",
+   "domains": [
+    "netflix.com"
+   ],
+   "category": "media"
+  },
+  {
+   "key": "spotify",
+   "name": "Spotify",
+   "domains": [
+    "spotify.com",
+    "spoti.fi"
+   ],
+   "category": "media"
+  },
+  {
+   "key": "disney",
+   "name": "Disney+",
+   "domains": [
+    "disneyplus.com",
+    "disney.com"
+   ],
+   "aliases": [
+    "disney plus"
+   ],
+   "category": "media"
+  },
+  {
+   "key": "twitch",
+   "name": "Twitch",
+   "domains": [
+    "twitch.tv"
+   ],
+   "category": "media"
+  },
+  {
+   "key": "steam",
+   "name": "Steam",
+   "domains": [
+    "steampowered.com",
+    "steamcommunity.com",
+    "steamstatic.com"
+   ],
+   "aliases": [
+    "valve"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "epicgames",
+   "name": "Epic Games",
+   "domains": [
+    "epicgames.com"
+   ],
+   "aliases": [
+    "fortnite"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "roblox",
+   "name": "Roblox",
+   "domains": [
+    "roblox.com"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "riot",
+   "name": "Riot Games",
+   "domains": [
+    "riotgames.com"
+   ],
+   "aliases": [
+    "valorant",
+    "league of legends"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "blizzard",
+   "name": "Blizzard",
+   "domains": [
+    "blizzard.com",
+    "battle.net"
+   ],
+   "aliases": [
+    "battle net"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "playstation",
+   "name": "PlayStation",
+   "domains": [
+    "playstation.com"
+   ],
+   "aliases": [
+    "psn"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "nintendo",
+   "name": "Nintendo",
+   "domains": [
+    "nintendo.com"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "ea",
+   "name": "EA",
+   "domains": [
+    "ea.com"
+   ],
+   "aliases": [
+    "electronic arts"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "ubisoft",
+   "name": "Ubisoft",
+   "domains": [
+    "ubisoft.com"
+   ],
+   "category": "gaming"
+  },
+  {
+   "key": "dropbox",
+   "name": "Dropbox",
+   "domains": [
+    "dropbox.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "wetransfer",
+   "name": "WeTransfer",
+   "domains": [
+    "wetransfer.com",
+    "we.tl"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "adobe",
+   "name": "Adobe",
+   "domains": [
+    "adobe.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "zoom",
+   "name": "Zoom",
+   "domains": [
+    "zoom.us",
+    "zoom.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "slack",
+   "name": "Slack",
+   "domains": [
+    "slack.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "docusign",
+   "name": "DocuSign",
+   "domains": [
+    "docusign.com",
+    "docusign.net"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "salesforce",
+   "name": "Salesforce",
+   "domains": [
+    "salesforce.com",
+    "force.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "okta",
+   "name": "Okta",
+   "domains": [
+    "okta.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "github",
+   "name": "GitHub",
+   "domains": [
+    "github.com",
+    "githubusercontent.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "gitlab",
+   "name": "GitLab",
+   "domains": [
+    "gitlab.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "atlassian",
+   "name": "Atlassian",
+   "domains": [
+    "atlassian.com"
+   ],
+   "aliases": [
+    "jira",
+    "confluence"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "npm",
+   "name": "npm",
+   "domains": [
+    "npmjs.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "docker",
+   "name": "Docker",
+   "domains": [
+    "docker.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "cloudflare",
+   "name": "Cloudflare",
+   "domains": [
+    "cloudflare.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "godaddy",
+   "name": "GoDaddy",
+   "domains": [
+    "godaddy.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "namecheap",
+   "name": "Namecheap",
+   "domains": [
+    "namecheap.com"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "wordpress",
+   "name": "WordPress",
+   "domains": [
+    "wordpress.com",
+    "wordpress.org"
+   ],
+   "category": "tech"
+  },
+  {
+   "key": "norton",
+   "name": "Norton",
+   "domains": [
+    "norton.com"
+   ],
+   "category": "security"
+  },
+  {
+   "key": "mcafee",
+   "name": "McAfee",
+   "domains": [
+    "mcafee.com"
+   ],
+   "category": "security"
+  },
+  {
+   "key": "kaspersky",
+   "name": "Kaspersky",
+   "domains": [
+    "kaspersky.com"
+   ],
+   "category": "security"
+  },
+  {
+   "key": "avast",
+   "name": "Avast",
+   "domains": [
+    "avast.com"
+   ],
+   "category": "security"
+  },
+  {
+   "key": "ebay",
+   "name": "eBay",
+   "domains": [
+    "ebay.com"
+   ],
+   "tld_variants": true,
+   "category": "retail"
+  },
+  {
+   "key": "aliexpress",
+   "name": "AliExpress",
+   "domains": [
+    "aliexpress.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "alibaba",
+   "name": "Alibaba",
+   "domains": [
+    "alibaba.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "walmart",
+   "name": "Walmart",
+   "domains": [
+    "walmart.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "bestbuy",
+   "name": "Best Buy",
+   "domains": [
+    "bestbuy.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "shein",
+   "name": "Shein",
+   "domains": [
+    "shein.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "temu",
+   "name": "Temu",
+   "domains": [
+    "temu.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "noon",
+   "name": "Noon",
+   "domains": [
+    "noon.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "jumia",
+   "name": "Jumia",
+   "domains": [
+    "jumia.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "talabat",
+   "name": "Talabat",
+   "domains": [
+    "talabat.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "careem",
+   "name": "Careem",
+   "domains": [
+    "careem.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "uber",
+   "name": "Uber",
+   "domains": [
+    "uber.com"
+   ],
+   "category": "retail"
+  },
+  {
+   "key": "airbnb",
+   "name": "Airbnb",
+   "domains": [
+    "airbnb.com"
+   ],
+   "category": "travel"
+  },
+  {
+   "key": "booking",
+   "name": "Booking.com",
+   "domains": [
+    "booking.com"
+   ],
+   "category": "travel"
+  },
+  {
+   "key": "expedia",
+   "name": "Expedia",
+   "domains": [
+    "expedia.com"
+   ],
+   "category": "travel"
+  },
+  {
+   "key": "vodafone",
+   "name": "Vodafone",
+   "domains": [
+    "vodafone.com"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "zain",
+   "name": "Zain",
+   "domains": [
+    "zain.com"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "etisalat",
+   "name": "Etisalat",
+   "domains": [
+    "etisalat.com",
+    "eand.com"
+   ],
+   "aliases": [
+    "e&"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "att",
+   "name": "AT&T",
+   "domains": [
+    "att.com"
+   ],
+   "aliases": [
+    "at&t"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "verizon",
+   "name": "Verizon",
+   "domains": [
+    "verizon.com"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "tmobile",
+   "name": "T-Mobile",
+   "domains": [
+    "t-mobile.com"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "xfinity",
+   "name": "Xfinity",
+   "domains": [
+    "xfinity.com",
+    "comcast.com"
+   ],
+   "aliases": [
+    "comcast"
+   ],
+   "category": "telecom"
+  },
+  {
+   "key": "dhl",
+   "name": "DHL",
+   "domains": [
+    "dhl.com",
+    "dhl.de"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "fedex",
+   "name": "FedEx",
+   "domains": [
+    "fedex.com"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "ups",
+   "name": "UPS",
+   "domains": [
+    "ups.com"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "usps",
+   "name": "USPS",
+   "domains": [
+    "usps.com"
+   ],
+   "aliases": [
+    "us postal service"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "royalmail",
+   "name": "Royal Mail",
+   "domains": [
+    "royalmail.com"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "aramex",
+   "name": "Aramex",
+   "domains": [
+    "aramex.com"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "dpd",
+   "name": "DPD",
+   "domains": [
+    "dpd.com"
+   ],
+   "category": "shipping"
+  },
+  {
+   "key": "irs",
+   "name": "IRS",
+   "domains": [
+    "irs.gov"
+   ],
+   "aliases": [
+    "internal revenue service"
+   ],
+   "category": "government"
+  },
+  {
+   "key": "ssa",
+   "name": "Social Security Administration",
+   "domains": [
+    "ssa.gov"
+   ],
+   "category": "government"
+  }
+ ]
+}

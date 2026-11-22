@@ -1,0 +1,46 @@
+{
+  "version": "1",
+  "description": "Public threat feeds downloaded by `update-feeds`. Review each licence before enabling. Which feeds run is controlled by UNMASK_ENABLED_FEEDS. Formats: urls | hosts | cidr_json_lines | cidr_text | asn_json_lines | asn_text.",
+  "feeds": [
+    {
+      "name": "openphish",
+      "title": "OpenPhish Community Feed",
+      "url": "https://openphish.com/feed.txt",
+      "format": "urls", "kind": "url", "category": "phishing",
+      "min_expected": 20, "max_bytes": 10000000,
+      "terms_url": "https://openphish.com/terms.html",
+      "terms": "Free for NON-COMMERCIAL use only; refreshed about every 12 hours. Commercial deployments need a licence from OpenPhish.",
+      "attribution": "OpenPhish Community Feed"
+    },
+    {
+      "name": "spamhaus_drop",
+      "title": "Spamhaus DROP (IPv4 netblocks)",
+      "url": "https://www.spamhaus.org/drop/drop_v4.json",
+      "format": "cidr_json_lines", "kind": "cidr", "category": "abuse",
+      "min_expected": 100, "max_bytes": 5000000,
+      "terms_url": "https://www.spamhaus.org/drop/terms",
+      "terms": "Free of charge; credit to The Spamhaus Project must accompany use. Changes daily, so refresh at least daily.",
+      "attribution": "The Spamhaus Project (DROP)"
+    },
+    {
+      "name": "spamhaus_drop_v6",
+      "title": "Spamhaus DROP (IPv6 netblocks)",
+      "url": "https://www.spamhaus.org/drop/drop_v6.json",
+      "format": "cidr_json_lines", "kind": "cidr", "category": "abuse",
+      "min_expected": 1, "max_bytes": 2000000,
+      "terms_url": "https://www.spamhaus.org/drop/terms",
+      "terms": "Free of charge; credit to The Spamhaus Project must accompany use.",
+      "attribution": "The Spamhaus Project (DROP)"
+    },
+    {
+      "name": "spamhaus_asndrop",
+      "title": "Spamhaus ASN-DROP (hijacked / criminal networks)",
+      "url": "https://www.spamhaus.org/drop/asndrop.json",
+      "format": "asn_json_lines", "kind": "asn", "category": "abuse",
+      "min_expected": 5, "max_bytes": 2000000,
+      "terms_url": "https://www.spamhaus.org/drop/terms",
+      "terms": "Free of charge; credit to The Spamhaus Project must accompany use.",
+      "attribution": "The Spamhaus Project (ASN-DROP)"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Exact versions this release was built and tested with (Python 3.12). Regenerate after changing dependencies:
+#   python -m venv .venv && .venv/bin/pip install <deps from pyproject.toml> && .venv/bin/pip freeze
+# Runtime + development/test dependencies.
+-r requirements.lock
+httpx==0.28.1
+iniconfig==2.3.1
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+pytest-asyncio==1.5.0
+ruff==0.17.6

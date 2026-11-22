@@ -1,0 +1,639 @@
+{
+ "version": "2026.11",
+ "description": "Lure phrases that pressure victims. Matched case- and diacritic-insensitively. `weak` phrases only count when combined with others.",
+ "urgency": [
+  {
+   "phrase": "account suspended",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "account has been suspended",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "account locked",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "account has been locked",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "account will be closed",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "account limited",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "access restricted",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "temporarily suspended",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "will be deleted",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "has been deactivated",
+   "category": "suspension",
+   "lang": "en"
+  },
+  {
+   "phrase": "verify your account",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "verify your identity",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "confirm your identity",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "confirm your account",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "confirm your details",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "urgent verification",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "verification required",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "reactivate your account",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "update your information",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "update your payment",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "validate your account",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "verify now",
+   "category": "verify",
+   "lang": "en"
+  },
+  {
+   "phrase": "unusual activity",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "suspicious activity",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "unauthorized login",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "unauthorised access",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "security alert",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "security warning",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "password will expire",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "password expires",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "sign-in attempt",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "unrecognized device",
+   "category": "security",
+   "lang": "en"
+  },
+  {
+   "phrase": "payment failed",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "payment declined",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "billing problem",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "update your billing",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "invoice attached",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "payment overdue",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "refund pending",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "unable to process your payment",
+   "category": "payment",
+   "lang": "en"
+  },
+  {
+   "phrase": "you have won",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "you've won",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "claim your reward",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "claim your prize",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "free gift",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "gift card",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "selected to receive",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "lucky winner",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "claim now",
+   "category": "prize",
+   "lang": "en"
+  },
+  {
+   "phrase": "congratulations",
+   "category": "prize",
+   "lang": "en",
+   "weak": true
+  },
+  {
+   "phrase": "exclusive offer",
+   "category": "prize",
+   "lang": "en",
+   "weak": true
+  },
+  {
+   "phrase": "could not be delivered",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "delivery failed",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "delivery fee",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "reschedule delivery",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "parcel on hold",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "customs fee",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "shipment on hold",
+   "category": "delivery",
+   "lang": "en"
+  },
+  {
+   "phrase": "immediate action required",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "within 24 hours",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "within 48 hours",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "final warning",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "last chance",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "legal action",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "failure to comply",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "avoid suspension",
+   "category": "threat",
+   "lang": "en"
+  },
+  {
+   "phrase": "act now",
+   "category": "threat",
+   "lang": "en",
+   "weak": true
+  },
+  {
+   "phrase": "urgent",
+   "category": "threat",
+   "lang": "en",
+   "weak": true
+  },
+  {
+   "phrase": "immediately",
+   "category": "threat",
+   "lang": "en",
+   "weak": true
+  },
+  {
+   "phrase": "connect your wallet",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "claim airdrop",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "validate your wallet",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "wallet synchronization",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "recovery phrase",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "seed phrase",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "rectify your wallet",
+   "category": "crypto",
+   "lang": "en"
+  },
+  {
+   "phrase": "your computer is infected",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "virus detected",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "call this number",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "call microsoft support",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "call technical support",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "toll-free",
+   "category": "support",
+   "lang": "en"
+  },
+  {
+   "phrase": "تم تعليق حسابك",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تم إيقاف حسابك",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "حسابك معلق",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "حسابك مقيد",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "سيتم إغلاق حسابك",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تم تقييد حسابك",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "سيتم حذف حسابك",
+   "category": "suspension",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تأكيد هويتك",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تحقق من حسابك",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تأكيد حسابك",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تحديث بياناتك",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تحديث معلوماتك",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "التحقق من الهوية",
+   "category": "verify",
+   "lang": "ar"
+  },
+  {
+   "phrase": "نشاط مشبوه",
+   "category": "security",
+   "lang": "ar"
+  },
+  {
+   "phrase": "محاولة دخول غير مصرح",
+   "category": "security",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تنبيه أمني",
+   "category": "security",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تنبيه أمان",
+   "category": "security",
+   "lang": "ar"
+  },
+  {
+   "phrase": "فشل الدفع",
+   "category": "payment",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تعذر إتمام الدفع",
+   "category": "payment",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تحديث بيانات الدفع",
+   "category": "payment",
+   "lang": "ar"
+  },
+  {
+   "phrase": "فاتورة مستحقة",
+   "category": "payment",
+   "lang": "ar"
+  },
+  {
+   "phrase": "استرداد المبلغ",
+   "category": "payment",
+   "lang": "ar"
+  },
+  {
+   "phrase": "لقد ربحت",
+   "category": "prize",
+   "lang": "ar"
+  },
+  {
+   "phrase": "اربح الآن",
+   "category": "prize",
+   "lang": "ar"
+  },
+  {
+   "phrase": "احصل على جائزتك",
+   "category": "prize",
+   "lang": "ar"
+  },
+  {
+   "phrase": "هدية مجانية",
+   "category": "prize",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تم اختيارك",
+   "category": "prize",
+   "lang": "ar"
+  },
+  {
+   "phrase": "مبروك",
+   "category": "prize",
+   "lang": "ar",
+   "weak": true
+  },
+  {
+   "phrase": "تعذر توصيل الشحنة",
+   "category": "delivery",
+   "lang": "ar"
+  },
+  {
+   "phrase": "رسوم التوصيل",
+   "category": "delivery",
+   "lang": "ar"
+  },
+  {
+   "phrase": "شحنتك معلقة",
+   "category": "delivery",
+   "lang": "ar"
+  },
+  {
+   "phrase": "رسوم الجمارك",
+   "category": "delivery",
+   "lang": "ar"
+  },
+  {
+   "phrase": "إجراء فوري",
+   "category": "threat",
+   "lang": "ar"
+  },
+  {
+   "phrase": "خلال 24 ساعة",
+   "category": "threat",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تحذير أخير",
+   "category": "threat",
+   "lang": "ar"
+  },
+  {
+   "phrase": "عاجل",
+   "category": "threat",
+   "lang": "ar",
+   "weak": true
+  },
+  {
+   "phrase": "فورا",
+   "category": "threat",
+   "lang": "ar",
+   "weak": true
+  },
+  {
+   "phrase": "ربط المحفظة",
+   "category": "crypto",
+   "lang": "ar"
+  },
+  {
+   "phrase": "عبارة الاسترداد",
+   "category": "crypto",
+   "lang": "ar"
+  },
+  {
+   "phrase": "العبارة السرية",
+   "category": "crypto",
+   "lang": "ar"
+  },
+  {
+   "phrase": "جهازك مصاب",
+   "category": "support",
+   "lang": "ar"
+  },
+  {
+   "phrase": "تم اكتشاف فيروس",
+   "category": "support",
+   "lang": "ar"
+  },
+  {
+   "phrase": "اتصل بالدعم",
+   "category": "support",
+   "lang": "ar"
+  }
+ ]
+}

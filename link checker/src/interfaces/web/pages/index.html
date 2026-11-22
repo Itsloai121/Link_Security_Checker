@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#000000">
+<meta name="referrer" content="no-referrer">
+<script src="/static/components/js-flag.js"></script>
+<link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/unbounded-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/instrument-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/static/styles/tokens.css">
+<link rel="stylesheet" href="/static/styles/base.css">
+<link rel="stylesheet" href="/static/styles/effects.css">
+<link rel="stylesheet" href="/static/styles/layout.css">
+<link rel="stylesheet" href="/static/styles/components.css">
+<link rel="stylesheet" href="/static/styles/pages.css">
+<title>Unmask: see where a link really goes</title>
+<meta name="description" content="Unmask follows a link without opening it in your browser and runs 20 tests to expose phishing, hidden redirects and look-alike domains.">
+<script type="module" src="/static/pages/index.page.js"></script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="light" aria-hidden="true"><div class="light__lines"></div><div class="light__glow"></div><div class="light__beam"></div><div class="light__beam light__beam--2"></div></div>
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="/"><img src="/assets/images/logo-mark.svg" alt="" width="34" height="34"><span>Unmask</span></a>
+    <nav class="nav" aria-label="Main">
+      <a href="/#tests">What we check</a>
+      <a href="/#how">How it works</a>
+      <a class="btn btn--primary btn--small float" href="/process">Check a link</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <section class="hero container" aria-labelledby="hero-title">
+    <h1 class="hero__title" id="hero-title" data-type data-type-speed="38">Know where a link <em>really</em> goes before you click it.</h1>
+    <p class="lede hero__lede" data-type="words" data-type-speed="52">Attackers disguise links so they look honest. Unmask follows a link without ever opening it in your browser, then runs 20 tests to expose what is hiding behind it.</p>
+    <div class="hero__cta">
+      <a class="btn btn--primary float" href="/process">Check a link</a>
+      <a class="btn btn--ghost float" href="#tests">See the 20 tests</a>
+    </div>
+    <figure class="unmask glass glass--frost" data-reveal>
+      <p class="unmask__url" aria-hidden="true"><span class="seg seg--scheme">https://</span><span class="seg seg--decoy">secure.paypal.com<span class="tag tag--decoy">decoy: your browser ignores this</span></span><span class="seg seg--at">@</span><span class="seg seg--host">login-paypa1.verify-account.top<span class="tag tag--real">the real destination</span></span><span class="seg seg--path">/signin</span></p>
+      <span class="unmask__beam" aria-hidden="true"></span>
+      <figcaption class="sr-only">A disguised link, https://secure.paypal.com@login-paypa1.verify-account.top/signin. Everything before the @ is decoy text; the real destination is login-paypa1.verify-account.top.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section container" id="problem" aria-labelledby="problem-title">
+    <div class="problem">
+      <div class="problem__copy">
+        <h2 id="problem-title" data-type data-type-speed="32">You cannot judge a link by looking at it.</h2>
+        <p class="lede" data-reveal>Every trick on this page makes a dangerous link look ordinary. They work because people check the part of an address that is easiest to fake. Unmask checks all of it, including the parts you cannot see.</p>
+      </div>
+      <div class="disguises">
+        <article class="disguise glass float" data-reveal><code class="disguise__url">paypa1.com</code><p><strong>A number pretending to be a letter.</strong> Swapped characters, extra words and small misspellings imitate a brand you trust.</p></article>
+        <article class="disguise glass float" data-reveal><code class="disguise__url">https://trusted.com@evil-site.example</code><p><strong>Everything before the @ is decoy.</strong> Browsers ignore it, but your eyes read it first.</p></article>
+        <article class="disguise glass float" data-reveal><code class="disguise__url">bit.ly/3xYzAbc</code><p><strong>A short link with a hidden destination.</strong> The real address only appears after one or more redirects.</p></article>
+        <article class="disguise glass float" data-reveal><code class="disguise__url">xn--pypal-4ve.com</code><p><strong>Letters from another alphabet.</strong> A Cyrillic “а” looks exactly like a Latin “a”, so a fake domain reads as the real one.</p></article>
+        <article class="disguise glass float" data-reveal><code class="disguise__url">trusted.com/go?url=evil.example</code><p><strong>A trusted site that bounces you elsewhere.</strong> The link starts somewhere reputable and lands somewhere that is not.</p></article>
+        <article class="disguise glass float" data-reveal><code class="disguise__url">the page itself</code><p><strong>A page that behaves differently when inspected.</strong> Some phishing pages show scanners one thing and visitors another.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section container" id="tests" aria-labelledby="tests-title">
+    <div class="section__head">
+      <h2 id="tests-title" data-type data-type-speed="32">Twenty tests. Every one explained.</h2>
+      <p class="lede" data-reveal>Each test looks at a different place a link can hide something. In the report, every test shows what it does, what it found, and the evidence behind it.</p>
+    </div>
+    <div class="tests" id="tests-grid" aria-live="polite"></div>
+    <p class="lede" id="tests-error" hidden>The list of tests could not be loaded right now. Please refresh the page.</p>
+    <noscript><p class="lede">The list of tests needs JavaScript to display.</p></noscript>
+  </section>
+
+  <section class="section container" id="how" aria-labelledby="how-title">
+    <div class="section__head">
+      <h2 id="how-title" data-type data-type-speed="32">Three steps, no clicking.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step glass float" data-reveal><h3>Paste the link</h3><p>Copy it from the message instead of clicking it. If you know the text it displayed, add that too so we can compare label and destination.</p></li>
+      <li class="step glass float" data-reveal><h3>We follow it for you</h3><p>Our server walks the redirects, reads the page, and looks up the domain, certificate and network. The link is never opened in your browser.</p></li>
+      <li class="step glass float" data-reveal><h3>Read the report</h3><p>You get a verdict, a risk score and all 20 tests in plain language, with the evidence behind each one.</p></li>
+    </ol>
+  </section>
+
+  <section class="section container" id="limits" aria-labelledby="limits-title">
+    <div class="limits glass" data-reveal>
+      <h2 id="limits-title">What Unmask cannot promise</h2>
+      <ul>
+        <li>No tool can prove a link is safe. “No threats found” means these 20 tests found nothing, not that nothing exists.</li>
+        <li>Brand-new attacks may not be on any blocklist yet. That is why the other tests inspect the link, the journey and the page itself.</li>
+        <li>Pages are read, not run. Content that only appears after JavaScript executes can stay hidden, and the report says so.</li>
+        <li>If a test cannot run, it is marked “Not verified”, never “Clear”.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section container">
+    <div class="cta-band glass glass--frost" data-reveal>
+      <h2>Got a link you are unsure about?</h2>
+      <a class="btn btn--primary float" href="/process">Check a link</a>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p><strong>Your link is never opened in your browser.</strong> Reports are deleted automatically after 24 hours, and you can delete one yourself at any time.</p>
+    <p>Unmask reports what its tests find. It cannot prove a link is safe. When something is unsure or could not be checked, the report says so. Threat data, when enabled: OpenPhish community feed (non-commercial use) and The Spamhaus Project DROP lists.</p>
+    <button type="button" class="link-button" id="motion-toggle" aria-pressed="false">Pause animations</button>
+  </div>
+</footer>
+</body>
+</html>

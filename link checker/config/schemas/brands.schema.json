@@ -1,0 +1,78 @@
+{
+  "$defs": {
+    "BrandModel": {
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Aliases",
+          "type": "array"
+        },
+        "category": {
+          "default": "",
+          "title": "Category",
+          "type": "string"
+        },
+        "domains": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Domains",
+          "type": "array"
+        },
+        "key": {
+          "pattern": "^[a-z0-9_]{2,40}$",
+          "title": "Key",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 60,
+          "minLength": 2,
+          "title": "Name",
+          "type": "string"
+        },
+        "tld_variants": {
+          "default": false,
+          "title": "Tld Variants",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "key",
+        "name",
+        "domains"
+      ],
+      "title": "BrandModel",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "brands": {
+      "items": {
+        "$ref": "#/$defs/BrandModel"
+      },
+      "title": "Brands",
+      "type": "array"
+    },
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "brands"
+  ],
+  "title": "BrandsFile",
+  "type": "object"
+}

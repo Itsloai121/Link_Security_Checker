@@ -1,0 +1,60 @@
+{
+  "$defs": {
+    "LexiconEntryModel": {
+      "additionalProperties": false,
+      "properties": {
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "lang": {
+          "default": "en",
+          "title": "Lang",
+          "type": "string"
+        },
+        "phrase": {
+          "maxLength": 80,
+          "minLength": 3,
+          "title": "Phrase",
+          "type": "string"
+        },
+        "weak": {
+          "default": false,
+          "title": "Weak",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "phrase",
+        "category"
+      ],
+      "title": "LexiconEntryModel",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "description": {
+      "default": "",
+      "title": "Description",
+      "type": "string"
+    },
+    "urgency": {
+      "items": {
+        "$ref": "#/$defs/LexiconEntryModel"
+      },
+      "title": "Urgency",
+      "type": "array"
+    },
+    "version": {
+      "title": "Version",
+      "type": "string"
+    }
+  },
+  "required": [
+    "version",
+    "urgency"
+  ],
+  "title": "LexiconFile",
+  "type": "object"
+}

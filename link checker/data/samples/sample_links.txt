@@ -1,0 +1,13 @@
+# Safe practice links. Every one uses a reserved domain (.example, .test, .invalid) or a documentation IP, so none can reach a real site.
+# Paste them into the Check page, or run:  python -m interfaces.cli scan "<link>"
+https://secure.paypal.com@login-paypa1.example/signin            # @ decoy: everything before the @ is ignored by the browser
+https://paypa1-login.example/                                    # a digit standing in for a letter
+https://xn--pypal-4ve.example/                                   # Cyrillic look-alike letter (punycode)
+http://3232235777/login.php                                      # an IP address hidden as one big number
+https://login.microsoft.com.account-verify.example/              # a real brand name used as a subdomain
+https://example.example/%70%61%79%70%61%6c%2f%73%69%67%6e%69%6e  # needless percent-encoding hides the words
+https://www.paypal.com/go?url=https://evil.example/             # an open redirect on a trusted domain
+http://192.0.2.44:8081/invoice.pdf.exe                           # double extension on a bare IP and an unusual port
+javascript:alert(document.cookie)                                # script instead of a website
+data:text/html;base64,PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==       # a page hidden inside the link itself
+ms-msdt:/id PCWDiagnostic /skip force /param "IT_BrowseForFile=x"  # Windows handler abused for remote code execution

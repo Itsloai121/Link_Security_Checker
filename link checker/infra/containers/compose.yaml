@@ -1,0 +1,27 @@
+# docker compose -f infra/containers/compose.yaml up --build
+# Optional settings file: copy infra/environments/production.env.template to infra/environments/production.env
+services:
+  unmask:
+    build:
+      context: ../..
+      dockerfile: infra/containers/Dockerfile
+    image: unmask:1.0.0
+    ports:
+      - "127.0.0.1:8000:8000"      # publish through your own HTTPS reverse proxy, not directly
+    env_file:
+      - path: ../environments/production.env
+        required: false
+    environment:
+      UNMASK_FEED_REFRESH_HOURS: "6"
+    volumes:
+      - unmask-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp
+    cap_drop: [ALL]
+    security_opt:
+      - no-new-privileges:true
+    restart: unless-stopped
+
+volumes:
+  unmask-data: {}

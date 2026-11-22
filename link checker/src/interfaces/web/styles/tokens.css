@@ -1,0 +1,36 @@
+/* Design tokens. Brief: yellow = primary, black = secondary, white = last. Status colours are the only additions,
+   and every status also has an icon and a word, so colour is never the only signal. */
+:root {
+  --black: #000;
+  --yellow: #ffd60a;
+  --yellow-2: #ffe566;
+  --white: #fff;
+
+  --text: rgb(255 255 255 / 0.93);
+  --text-2: rgb(255 255 255 / 0.68);
+  --text-3: rgb(255 255 255 / 0.46);
+  --line: rgb(255 255 255 / 0.1);
+  --line-strong: rgb(255 255 255 / 0.2);
+  --glass: rgb(255 255 255 / 0.045);
+  --glass-2: rgb(255 255 255 / 0.075);
+  --yellow-soft: rgb(255 214 10 / 0.13);
+  --yellow-line: rgb(255 214 10 / 0.38);
+
+  --st-clear: #8ee5ae;
+  --st-notice: #ffe98a;
+  --st-warning: #ffd60a;
+  --st-danger: #ff5c3a;
+  --st-unavailable: #9a9a9a;
+
+  --font-display: "Unbounded", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Instrument Sans", "Segoe UI", system-ui, -apple-system, "Noto Sans Arabic", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ease-slow: cubic-bezier(0.16, 0.7, 0.3, 1);
+  --radius: 22px;
+  --radius-sm: 12px;
+  --gutter: clamp(20px, 5vw, 56px);
+  --max: 1180px;
+  --header-h: 72px;
+}

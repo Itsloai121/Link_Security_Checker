@@ -1,0 +1,86 @@
+/* ---- index: hero ------------------------------------------------------------------------------------------------ */
+.hero { padding-block: clamp(56px, 9vw, 120px) clamp(40px, 6vw, 80px); }
+.hero__title { max-width: 15ch; }
+.hero__title em { font-style: normal; color: var(--yellow); }
+.hero__lede { margin-top: 28px; }
+.hero__cta { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 38px; }
+
+/* the signature element: a masked link being unmasked by a slow sweep of light */
+.unmask { position: relative; margin: clamp(48px, 7vw, 96px) 0 0; padding: clamp(26px, 4vw, 54px) clamp(20px, 3vw, 44px) clamp(54px, 6vw, 80px); overflow: hidden; }
+.unmask__url { position: relative; font: 400 clamp(0.95rem, 0.5rem + 2.1vw, 2.15rem) / 1.7 var(--font-mono); color: var(--text-2); overflow-wrap: anywhere; letter-spacing: -0.02em; --loop: 17s; }
+.seg { position: relative; display: inline; animation-duration: var(--loop); animation-iteration-count: infinite; animation-timing-function: ease-in-out; }
+.seg--scheme, .seg--path, .seg--at { color: var(--text-3); }
+.seg--decoy { animation-name: decoy; }
+.seg--host { animation-name: host; }
+.seg--at { animation: at-mark var(--loop) ease-in-out infinite; }
+@keyframes decoy { 0%, 56% { color: var(--white); text-decoration-color: transparent; } 64%, 90% { color: var(--text-3); text-decoration: line-through; text-decoration-color: rgb(255 255 255 / 0.5); } 98%, 100% { color: var(--white); text-decoration-color: transparent; } }
+@keyframes host { 0%, 62% { color: var(--white); text-shadow: none; } 70%, 90% { color: var(--yellow); text-shadow: 0 0 34px rgb(255 214 10 / 0.7); } 98%, 100% { color: var(--white); text-shadow: none; } }
+@keyframes at-mark { 0%, 58% { color: var(--text-3); } 66%, 90% { color: var(--yellow); } 98%, 100% { color: var(--text-3); } }
+.tag { position: absolute; left: 0; top: calc(100% + 0.2em); font: 500 0.72rem/1.3 var(--font-body); letter-spacing: 0.02em; white-space: nowrap; opacity: 0; animation: var(--loop) ease-in-out infinite; }
+.tag--decoy { color: var(--text-2); animation-name: tag-decoy; }
+.tag--real { color: var(--yellow); animation-name: tag-real; }
+@keyframes tag-decoy { 0%, 64% { opacity: 0; translate: 0 -4px; } 71%, 88% { opacity: 1; translate: 0 0; } 96%, 100% { opacity: 0; } }
+@keyframes tag-real { 0%, 70% { opacity: 0; translate: 0 -4px; } 77%, 88% { opacity: 1; translate: 0 0; } 96%, 100% { opacity: 0; } }
+.unmask__beam { position: absolute; top: 0; bottom: 0; left: 0; width: 2px; background: linear-gradient(transparent, var(--yellow) 22%, var(--white) 50%, var(--yellow) 78%, transparent); box-shadow: 0 0 40px 10px rgb(255 214 10 / 0.35); opacity: 0; animation: beam-sweep 17s ease-in-out infinite; pointer-events: none; }
+@keyframes beam-sweep { 0%, 14% { left: 2%; opacity: 0; } 18% { opacity: 1; } 56% { left: 98%; opacity: 1; } 60%, 100% { left: 98%; opacity: 0; } }
+@media (max-width: 760px) { .unmask__beam { display: none; } .tag { font-size: 0.64rem; } }
+@media (prefers-reduced-motion: reduce) { .seg, .tag, .unmask__beam { animation: none; } .seg--decoy { color: var(--text-3); text-decoration: line-through; } .seg--host, .seg--at { color: var(--yellow); } .tag { opacity: 1; } .unmask__beam { display: none; } }
+
+/* ---- index: what it fixes ------------------------------------------------------------------------------------ */
+.problem { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); gap: clamp(32px, 6vw, 90px); align-items: start; }
+@media (max-width: 900px) { .problem { grid-template-columns: 1fr; } }
+.problem__copy { display: grid; gap: 22px; position: sticky; top: calc(var(--header-h) + 40px); }
+@media (max-width: 900px) { .problem__copy { position: static; } }
+.disguises { display: grid; gap: 22px; }
+.disguise { padding: 24px 26px; display: grid; gap: 10px; }
+.disguise__url { font-family: var(--font-mono); font-size: 0.95rem; color: var(--yellow); overflow-wrap: anywhere; }
+.disguise p { color: var(--text-2); font-size: 0.97rem; }
+.disguise strong { color: var(--text); font-weight: 600; }
+
+/* ---- index: the 20 tests, grouped ----------------------------------------------------------------------------- */
+.tests { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 24px; }
+.tests__group { padding: 26px; display: grid; gap: 16px; align-content: start; }
+.tests__group h3 { color: var(--yellow); font-size: 0.98rem; }
+.tests__group ul { display: grid; gap: 11px; }
+.tests__group li { color: var(--text-2); font-size: 0.95rem; line-height: 1.45; padding-left: 1.3em; position: relative; }
+.tests__group li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.5em; height: 0.5em; border-radius: 50%; background: var(--yellow-line); }
+
+/* ---- index: how it works --------------------------------------------------------------------------------------- */
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 24px; counter-reset: step; }
+.step { padding: 30px; display: grid; gap: 12px; align-content: start; }
+.step::before { counter-increment: step; content: counter(step); font: 700 2.4rem/1 var(--font-display); color: var(--yellow); }
+.step p { color: var(--text-2); }
+.limits { padding: clamp(26px, 4vw, 48px); display: grid; gap: 14px; max-width: 880px; }
+.limits ul { display: grid; gap: 10px; color: var(--text-2); }
+.limits li { padding-left: 1.5em; position: relative; }
+.limits li::before { content: ""; position: absolute; left: 0; top: 0.75em; width: 0.8em; height: 1px; background: var(--yellow); }
+.cta-band { text-align: center; display: grid; justify-items: center; gap: 28px; padding: clamp(40px, 7vw, 90px) clamp(20px, 4vw, 60px); }
+
+/* ---- process ---------------------------------------------------------------------------------------------------- */
+.process { min-height: calc(100vh - var(--header-h) - 160px); display: grid; align-content: center; padding-block: clamp(48px, 8vw, 110px); }
+.process__title { max-width: 18ch; margin-bottom: 18px; }
+.checker { margin-top: clamp(32px, 5vw, 54px); padding: clamp(22px, 4vw, 44px); display: grid; gap: 22px; }
+.checker__row { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: end; }
+@media (max-width: 700px) { .checker__row { grid-template-columns: 1fr; } }
+.optional summary { cursor: pointer; color: var(--yellow); font-weight: 600; width: max-content; list-style: none; padding: 4px 0; }
+.optional summary::-webkit-details-marker { display: none; }
+.optional summary::before { content: "+ "; }
+.optional[open] summary::before { content: "− "; }
+.optional .field { margin-top: 14px; }
+.examples { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; color: var(--text-3); font-size: 0.92rem; }
+.example { padding: 0.5em 1em; border-radius: 999px; background: transparent; border: 1px dashed var(--line-strong); color: var(--text-2); font: 400 0.82rem/1.2 var(--font-mono); cursor: pointer; transition: color 0.4s, border-color 0.4s; max-width: 100%; overflow-wrap: anywhere; text-align: left; }
+.example:hover { color: var(--yellow); border-color: var(--yellow-line); }
+.assurances { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 18px 30px; margin-top: 30px; color: var(--text-3); font-size: 0.92rem; }
+.assurances li { padding-left: 1.4em; position: relative; }
+.assurances li::before { content: ""; position: absolute; left: 0; top: 0.62em; width: 0.7em; height: 0.7em; border-radius: 50%; border: 1px solid var(--yellow-line); }
+.assurances strong { color: var(--text-2); font-weight: 600; }
+
+/* ---- analysis ---------------------------------------------------------------------------------------------------- */
+.report { padding-block: clamp(36px, 6vw, 80px) clamp(60px, 9vw, 120px); display: grid; gap: clamp(28px, 4vw, 48px); }
+.report__empty { padding: clamp(32px, 6vw, 70px); display: grid; gap: 18px; justify-items: start; }
+
+.no-motion .seg, .no-motion .tag, .no-motion .unmask__beam { animation: none !important; }
+.no-motion .seg--decoy { color: var(--text-3); text-decoration: line-through; }
+.no-motion .seg--host, .no-motion .seg--at { color: var(--yellow); }
+.no-motion .tag { opacity: 1; }
+.no-motion .unmask__beam { display: none; }

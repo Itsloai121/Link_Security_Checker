@@ -1,0 +1,39 @@
+# Secrets and machine-specific settings
+.env
+.env.*
+!.env.example
+infra/environments/production.env
+
+# Local environments and caches
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+coverage/
+htmlcov/
+.coverage
+node_modules/
+
+# Build output
+build/
+dist/
+*.egg-info/
+
+# Runtime-generated data (database, downloaded state, logs): keep OUT of source control
+var/
+*.db
+*.db-wal
+*.db-shm
+logs/
+tmp/
+uploads/
+
+# Editors and OS
+.idea/
+.vscode/*
+!.vscode/settings.json
+.DS_Store
+Thumbs.db
